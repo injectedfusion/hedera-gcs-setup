@@ -59,7 +59,7 @@ Let's go ahead and check what's in the Storage Bucket
 ```consile
 gsutil -u [YOUR_PROJECT_ID] ls gs://hedera-mainnet-streams
 ```
-
+![](static/list_buckets.gif)
 Example for **mainnet**:
 
 ```console
