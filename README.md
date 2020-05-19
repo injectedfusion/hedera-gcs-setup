@@ -55,11 +55,17 @@ You must ensure billing is defined and configured to your Project. For further i
 Replace the text in **[Brackets]** with your Google Cloud Storage Account
 
 Let's go ahead and check what's in the Storage Bucket
-```consile
+```console
 gsutil -u [YOUR_PROJECT_ID] ls gs://hedera-mainnet-streams
 ```
 ![](static/list_buckets.gif)
 Example for **mainnet**:
+
+We'll need to create the destination directory. Likely will need to elevate privileges.
+
+```console
+sudo mkdir /var/lib/hedera-mirror-importer
+```
 
 ```console
 gsutil -u [YOUR_PROJECT_ID] cp gs://hedera-mainnet-streams /var/lib/hedera-mirror-importer
