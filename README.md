@@ -68,7 +68,11 @@ mkdir /tmp/hedera-mirror-importer
 ```
 
 ```console
-gsutil -u [YOUR_PROJECT_ID] cp -r gs://hedera-mainnet-streams /tmp/hedera-mirror-importer
+gsutil -u [YOUR_PROJECT_ID] cp -r gs://hedera-mainnet-streams /tmp/hedera-mirror-importer/accountbalances
+```
+
+```console
+gsutil -u [YOUR_PROJECT_ID] cp -r gs://hedera-mainnet-streams /tmp/hedera-mirror-importer/recordStreams
 ```
 
 For a complete list and how-to guide on [working with buckets](https://cloud.google.com/storage/docs/how-to#working-with-buckets) and [working with objects](https://cloud.google.com/storage/docs/how-to#working-with-objects)
