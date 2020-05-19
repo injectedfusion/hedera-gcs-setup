@@ -64,14 +64,13 @@ Example for **mainnet**:
 We'll need to create the destination directory. Likely will need to elevate privileges.
 
 ```console
-mkdir /tmp/hedera-mirror-importer
+mkdir /tmp/hedera-mirror-importer/accountBalances
+mkdir /tmp/hedera-mirror-importer/recordstreams
 ```
 
+Now it's time to download the necessary files to run a Hedera MirrorNode
 ```console
 gsutil -u [YOUR_PROJECT_ID] cp -r gs://hedera-mainnet-streams /tmp/hedera-mirror-importer/accountbalances
-```
-
-```console
 gsutil -u [YOUR_PROJECT_ID] cp -r gs://hedera-mainnet-streams /tmp/hedera-mirror-importer/recordStreams
 ```
 
