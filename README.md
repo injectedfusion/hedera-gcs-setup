@@ -21,7 +21,6 @@ Obtain access credentails for your user account via web-based authorization flow
 gcloud auth login
 ```
 ![](static/gcloud_auth.gif)
-
 Step 2) If you have multiple Google Cloud accounts it may be necessary to check which account is active.
 ```console
 gcloud auth list
