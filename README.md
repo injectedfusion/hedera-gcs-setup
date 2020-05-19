@@ -32,6 +32,11 @@ gcloud config set account `ACCOUNT`
 ```
 ![](static/gcloud_account_set.gif)
 
+Step 4) Set your Project ID
+```console
+gcloud config set project PROJECT_ID
+```
+
 For further information on gcloud auth, visit the [official documentation](https://cloud.google.com/sdk/gcloud/reference/auth/login).
 
 ### Accessing an object in the Hedera Object Storage Requestor Pays Bucket
@@ -39,21 +44,20 @@ For further information on gcloud auth, visit the [official documentation](https
 Hedera's Google Storage Bucket is configured for [requester pays](https://cloud.google.com/storage/docs/requester-pays). 
 Meaning that that mirror node operators will assume and accept the operational costs of reading and retrieving data records from the Hedera Network of your choice, either MainNet or TestNet.
 
-You must ensure billing is defined and configured to your Project. For further instructions see the [Cloud Billing Documentation](https://cloud.google.com/billing/docs/how-to/manage-billing-account).
+You must ensure billing is defined and configured to your Project. For further instructions see the [Cloud Billing Documentation](https://cloud.google.com/storage/docs/using-requester-pays#gsutil_3).
 
 
 | Name                      | Default Value                     | Description                                 |
 |---------------------------|---------------------------------  |---------------------------------------------|
 | [YOUR_PROJECT_ID]         |                                   | Your Google Cloud Project Unique Identifier |
-| [HEDERA_BUCKET_NAME]      | `hedera-stable-testnet-streams`   | Hedera's Google Cloud Storage Bucket Name   |
+| [HEDERA_BUCKET_NAME]      | `hedera-mainnet-streams`          | Hedera's Google Cloud Storage Bucket Name   |
 | [YOUR_OBJECT_DESTINATION] | `/var/lib/hedera-mirror-importer` | Location on where to store the file         |
 
 Replace the text in **[Brackets]** with your Google Cloud Storage Account
 
-Example for **testnet**:
-
-```console
-gsutil -u [YOUR_PROJECT_ID] cp gs://hedera-stable-testnet-streams /var/lib/hedera-mirror-importer
+Let's go ahead and check what's in the Storage Bucket
+```consile
+gsutil -u [YOUR_PROJECT_ID] ls gs://hedera-mainnet-streams
 ```
 
 Example for **mainnet**:
