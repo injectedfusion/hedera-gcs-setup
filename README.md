@@ -3,9 +3,6 @@
 This repository is provide an Ansible role to quickly stand up an open-source Hedera Mirror Node. 
 > Note: This how-to tutorial meant to quickly get started and not to be used as an official representation by Hedera on what platform architecture must be used.
 
-Hedera's Google Storage Bucket is configured for [requester pays](https://cloud.google.com/storage/docs/requester-pays). 
-Meaning that that mirror node operators will assume and accept the operational costs of reading and retrieving data records from the Hedera Network of your choice, either MainNet or TestNet.
-
 ## Getting Started
 
 These instructions will guide you on retrieving record streams from a Hedera Network via which are stored in Google Cloud storage buckets.
@@ -16,11 +13,14 @@ Before getting started, you must have the following prerequisites:
 
 * A [Google Cloud](https://cloud.google.com/) billing account [linked](https://cloud.google.com/billing/docs/how-to/manage-billing-account) to a [Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
 
-> Note: You must ensure billing is defined and configured to your Project. For further instructions see the [Cloud Billing Documentation](https://cloud.google.com/storage/docs/using-requester-pays#gsutil_3).
+> Note: In order to operate a Hedera Node, you must configure a billing account, because the object storage bucket you will need to pull streams from is configured for  [requester pays](https://cloud.google.com/storage/docs/requester-pays). 
+Meaning that that mirror node operators will assume and accept the operational costs of reading and retrieving data records from the Hedera Network of your choice, either MainNet or TestNet.
 
 
 * An [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04.4/) Linux Server with 2 CPU, 4GB Memory, 100 GB Storage
-* 
+> This is where we will install and operate a Hedera-Mirror-Node
+
+* [Ansible 2.9](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 ### Authenticate and Authorize gcloud to access the Cloud Platform with your Google user credentials
 
