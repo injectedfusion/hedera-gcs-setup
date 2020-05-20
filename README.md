@@ -1,4 +1,4 @@
-# Hedera Mirror Node Object Storage Bucket Setup
+# Hedera Mirror Node Ansible Setup Role
 
 This repository is provide an Ansible role to quickly stand up an open-source Hedera Mirror Node. 
 > Note: This how-to tutorial meant to quickly get started and not to be used as an official representation by Hedera on what platform architecture must be used.
