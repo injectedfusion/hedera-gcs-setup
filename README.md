@@ -1,6 +1,10 @@
 # Hedera Mirror Node Object Storage Bucket Setup
 
-This How-to is aimed at users who wish operate a community open-sourced Hedera Mirror Node. 
+This repository is provide an Ansible role to quickly stand up an open-source Hedera Mirror Node. 
+> Note: This how-to tutorial meant to quickly get started and not to be used as an official representation by Hedera on what platform architecture must be used.
+
+Hedera's Google Storage Bucket is configured for [requester pays](https://cloud.google.com/storage/docs/requester-pays). 
+Meaning that that mirror node operators will assume and accept the operational costs of reading and retrieving data records from the Hedera Network of your choice, either MainNet or TestNet.
 
 ## Getting Started
 
@@ -11,39 +15,15 @@ These instructions will guide you on retrieving record streams from a Hedera Net
 Before getting started, you must have the following prerequisites:
 
 * A [Google Cloud](https://cloud.google.com/) billing account [linked](https://cloud.google.com/billing/docs/how-to/manage-billing-account) to a [Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
-* [gsutil tool](https://cloud.google.com/storage/docs/gsutil)
+
+> Note: You must ensure billing is defined and configured to your Project. For further instructions see the [Cloud Billing Documentation](https://cloud.google.com/storage/docs/using-requester-pays#gsutil_3).
+
+
+* An [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04.4/) Linux Server with 2 CPU, 4GB Memory, 100 GB Storage
+* 
 
 ### Authenticate and Authorize gcloud to access the Cloud Platform with your Google user credentials
-Step 1)
-Obtain access credentails for your user account via web-based authorization flow.
 
-```console
-gcloud auth login
-```
-![](static/gcloud_auth.gif)
-Step 2) If you have multiple Google Cloud accounts it may be necessary to check which account is active.
-```console
-gcloud auth list
-```
-Step 3) Set the correct one, make sure to replace `ACCOUNT`.
-```console
-gcloud config set account `ACCOUNT`
-```
-![](static/gcloud_account_set.gif)
-
-Step 4) Set your Project ID
-```console
-gcloud config set project PROJECT_ID
-```
-
-For further information on gcloud auth, visit the [official documentation](https://cloud.google.com/sdk/gcloud/reference/auth/login).
-
-### Accessing an object in the Hedera Object Storage Requestor Pays Bucket
-
-Hedera's Google Storage Bucket is configured for [requester pays](https://cloud.google.com/storage/docs/requester-pays). 
-Meaning that that mirror node operators will assume and accept the operational costs of reading and retrieving data records from the Hedera Network of your choice, either MainNet or TestNet.
-
-You must ensure billing is defined and configured to your Project. For further instructions see the [Cloud Billing Documentation](https://cloud.google.com/storage/docs/using-requester-pays#gsutil_3).
 
 
 | Name                      | Default Value                     | Description                                 |
@@ -53,28 +33,6 @@ You must ensure billing is defined and configured to your Project. For further i
 | [YOUR_OBJECT_DESTINATION] | `/var/lib/hedera-mirror-importer` | Location on where to store the file         |
 
 Replace the text in **[Brackets]** with your Google Cloud Storage Account
-
-Let's go ahead and check what's in the Storage Bucket
-```console
-gsutil -u [YOUR_PROJECT_ID] ls gs://hedera-mainnet-streams
-```
-![](static/list_buckets.gif)
-Example for **mainnet**:
-
-We'll need to create the destination directory. Likely will need to elevate privileges.
-
-```console
-mkdir /tmp/hedera-mirror-importer/accountBalances
-mkdir /tmp/hedera-mirror-importer/recordstreams
-```
-
-Now it's time to download the necessary files to run a Hedera MirrorNode
-```console
-gsutil -u [YOUR_PROJECT_ID] cp -r gs://hedera-mainnet-streams /tmp/hedera-mirror-importer/accountBalances
-gsutil -u [YOUR_PROJECT_ID] cp -r gs://hedera-mainnet-streams /tmp/hedera-mirror-importer/recordstreams
-```
-
-For a complete list and how-to guide on [working with buckets](https://cloud.google.com/storage/docs/how-to#working-with-buckets) and [working with objects](https://cloud.google.com/storage/docs/how-to#working-with-objects)
 
 
 

@@ -1,0 +1,8 @@
+---
+- name: Install & Start Docker Engine
+  include: install.yml
+  become: true
+  tags:
+    - docker_install
+
+   
