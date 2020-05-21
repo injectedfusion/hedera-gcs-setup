@@ -14,7 +14,7 @@ company: Hedera Hashgraph
 # - GPLv3
 # - Apache
 # - CC-BY
-license: MIT
+license: "license (MIT)"
 
 min_ansible_version: 2.9
 

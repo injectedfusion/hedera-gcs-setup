@@ -1,9 +1,12 @@
-# Hedera Mirror Node Ansible Setup Role
+hedera-gcs-setup
+=========
 
 This repository is provide an Ansible role to quickly stand up an open-source Hedera Mirror Node. 
 > Note: This how-to tutorial meant to quickly get started and not to be used as an official representation by Hedera on what platform architecture must be used.
 
-## Prerequisites
+
+Requirements
+------------
 
 Before getting started, you must have the following prerequisites:
 
@@ -18,55 +21,6 @@ Meaning that mirror node operators will assume and accept the operational costs 
 
 * An [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04.4/) Linux Server with 2 CPU, 4GB Memory, 100 GB Storage
 > This is where we will install and operate a Hedera-Mirror-Node
-
-## Getting Started
-
-These instructions will guide you on retrieving record streams from a Hedera Network via which are stored in Google Cloud storage buckets. Don't worry about perform a git clone from here, we'll handle that with some automation.
-
-### Create our Project Directory and working files
-From your local machine let's create a project directory with some files
-that will look like this.
-
-**Step 1)** 
-```console
-mkdir hedera-mirror-node
-```
-**Step 2)**
-
-Let's create the subdirectories
-```console
-mkdir hedera-mirror-node/group_vars 
-```
-```console
-mkdir hedera-mirror-node/roles
-```
-
-**Step 3)**
-Using a text editor of your choice create an inventory file that looks something like this
-
-`hedera-mirror-node/inventory.ini`
-```ini
-[mirrornode]
-IPADDRESS ansible_ssh_user=USERNAME
-```
-> Note: replace IP Address with the IP address of your ubuntu server and the USERNAME with your host username, usually it's ubuntu.
-
-**Step 4)**
-We'll create a requirements folder to tell ansible where to download this Ansible role
-
-`hedera-mirror-node/roles/requirements.yml`
-```yml
----
-# from github
-- src: https://github.com/injectedfusion/hedera-gcs-setup
-...
-```
-
-**Step 5)**
-Navigate inside our project directory and launch the ansible requirements
-```console
-cd hedera-mirror-node
-```
 
 ### Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
 
@@ -96,27 +50,18 @@ From the Left Hand Nav Panel. Select Service Accounts
 
 **Step 11)** Copy your JSON key into the `hedera-mirror-node/group_vars` directory
 
-### We are ready to create and launch our playbook.
+Role Variables
+--------------
 
-**Step 1)**
+A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
-Using your code editor of choice, create a file in the top level of your directory `server_build.yml'
+Dependencies
+------------
 
+A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
-```yaml
----
-- hosts: mirrornode
-  become: true
-  roles:
-    - hedera-gcs-setup
-  tags: docker_install
-...
-```
-
-**Step 2)** Let's install the necessary ansible role
-```console
-ansible-galaxy install -r roles/requirements.yml --force
-```
+Example Playbook
+----------------
 
 Your project directory should look something like this
 ```console
@@ -129,13 +74,23 @@ Your project directory should look something like this
 └── server-build.yml
 ```
 
-**Step 3)** Now we are good to run our playbook which will build & deploy our MirrorNode
-```console
-ansible-playbook -i inventory server_build.yml
+`server_build.yml`
+```yaml
+---
+- hosts: mirrornode
+  become: true
+  roles:
+    - hedera-gcs-setup
+  tags: docker_install
+...
 ```
 
+License
+-------
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+BSD
 
-Please make sure to update tests as appropriate.
+Author Information
+------------------
+
+Gabriel Rodriguez

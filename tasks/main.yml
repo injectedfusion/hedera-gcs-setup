@@ -5,5 +5,3 @@
   become: true
   tags:
     - docker_install
-
-   
