@@ -76,6 +76,8 @@ ansible-galaxy install -r roles/requirements.yml
 
 **Step 1)** Will need to generate credentials to call the Google Cloud Storage JSON API from our Hedera Node
 
+Use the [Google Documentation Guide](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) for this step
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
