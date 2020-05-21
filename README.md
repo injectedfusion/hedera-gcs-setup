@@ -83,6 +83,8 @@ From the Left Hand Nav Panel. Select Service Accounts
 
 **Step 3)** Select your desired project
 
+**Step 4)** From the Top, click on + CREATE SERVICE ACCOUNT
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
