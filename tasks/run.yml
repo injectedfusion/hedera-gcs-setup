@@ -7,7 +7,6 @@
 
 - name: Uncomment line from docker-compose
   lineinfile:
-    dest: /opt/hedera-mirror-node/docker-compose.yml
+    path: /opt/hedera-mirror-node/docker-compose.yml
     regexp: '\s#-\s..application.yml:\/usr\/etc\/hedera-mirror-grpc\/application.yml'
     line: '    - ./application.yml:/usr/etc/hedera-mirror-grpc/application.yml'
-  
