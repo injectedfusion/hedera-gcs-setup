@@ -129,9 +129,7 @@ Example Playbook
 Execute our Playbook
 --------------------
 
-**Step 1)**
-
-Using your code editor of choice, create a file in the top level of your directory `server_build.yml'
+**Step 1)** Using your code editor of choice, create a file in the top level of your directory `server_build.yml'
 
 
 ```yaml
