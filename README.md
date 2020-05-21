@@ -67,9 +67,6 @@ Navigate inside our project directory and launch the ansible requirements
 ```console
 cd hedera-mirror-node
 ```
-```console
-ansible-galaxy install -r roles/requirements.yml
-```
 
 ### Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
 
@@ -116,6 +113,10 @@ Using your code editor of choice, create a file in the top level of your directo
 ...
 ```
 
+**Step 2)** Let's install the necessary ansible documentation
+```console
+ansible-galaxy install -r roles/requirements.yml
+```
 
 
 ## Contributing
