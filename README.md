@@ -113,7 +113,7 @@ Using your code editor of choice, create a file in the top level of your directo
 ...
 ```
 
-**Step 2)** Let's install the necessary ansible documentation
+**Step 2)** Let's install the necessary ansible role
 ```console
 ansible-galaxy install -r roles/requirements.yml
 ```
