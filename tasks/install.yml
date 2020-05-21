@@ -42,3 +42,6 @@
       git:
         repo: 'https://github.com/hashgraph/hedera-mirror-node.git'
         dest: /opt/hedera-mirror-node
+    
+    - name: Run Maven Install
+      command: ./opt/hedera-mirror-node/mvnw clean install -DskipTests
