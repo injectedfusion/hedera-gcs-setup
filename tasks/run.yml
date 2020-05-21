@@ -5,9 +5,10 @@
     src: templates/application.yml.j2
     dest: /opt/hedera-mirror-node/application.yml
 
-- name: Uncomment line from docker-compose
+- name: Remove line from docker-compose
   lineinfile:
     path: /opt/hedera-mirror-node/docker-compose.yml
     regexp: '#-\s..application.yml:\/usr\/etc\/hedera-mirror-grpc\/application.yml'
-    line: '    - ./application.yml:/usr/etc/hedera-mirror-grpc/application.yml'
+    # line: '    - ./application.yml:/usr/etc/hedera-mirror-grpc/application.yml'
     backrefs: yes
+    state: absent
