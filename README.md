@@ -22,8 +22,69 @@ Meaning that mirror node operators will assume and accept the operational costs 
 * An [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04.4/) Linux Server with 2 CPU, 4GB Memory, 100 GB Storage
 > This is where we will install and operate a Hedera-Mirror-Node
 
+Getting Started
+---------------
+
+These instructions will guide you on retrieving record streams from a Hedera Network via which are stored in Google Cloud storage buckets. Don't worry about perform a git clone from here, we'll handle that with some automation.
+
 ### Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
 
+### Create our Project Directory and working files
+From your local machine let's create a project directory with some files
+that will look like this.
+
+**Step 1)** 
+```console
+mkdir hedera-mirror-node
+```
+**Step 2)**
+
+Let's create the subdirectories
+```console
+mkdir hedera-mirror-node/group_vars 
+```
+```console
+mkdir hedera-mirror-node/roles
+```
+
+**Step 3)**
+Using a text editor of your choice create an inventory file that looks something like this
+
+`hedera-mirror-node/inventory.ini`
+```ini
+[mirrornode]
+IPADDRESS ansible_ssh_user=USERNAME
+```
+> Note: replace IP Address with the IP address of your ubuntu server and the USERNAME with your host username, usually it's ubuntu.
+
+**Step 4)**
+We'll create a requirements folder to tell ansible where to download this Ansible role
+
+`hedera-mirror-node/roles/requirements.yml`
+```yml
+---
+# from github
+- src: https://github.com/injectedfusion/hedera-gcs-setup
+...
+```
+
+**Step 5)**
+Navigate inside our project directory and launch the ansible requirements
+```console
+cd hedera-mirror-node
+```
+
+Project Directory Example
+-------------------------
+```
+.
+├── group_vars
+│   └── google-project-id.json
+├── inventory.ini
+├── roles
+│   └── requirements.yml
+└── server_build.yml
+```
 
 **Step 1)** Will need to generate credentials to call the Google Cloud Storage JSON API from our Hedera Node
 
@@ -50,17 +111,6 @@ From the Left Hand Nav Panel. Select Service Accounts
 
 **Step 11)** Copy your JSON key into the `hedera-mirror-node/group_vars` directory
 
-Project Directory Example
--------------------------
-```
-.
-├── group_vars
-│   └── google-project-id.json
-├── inventory.ini
-├── roles
-│   └── requirements.yml
-└── server_build.yml
-```
 
 Role Variables
 --------------
