@@ -1,10 +1,5 @@
 ---
-- name: fetch our credentials from group_vars
-  include_vars:
-    dir: ./group_vars/
-    extensions:
-        - json
-        - json 
+
 - name: Provide our Application Config
   template:
     src: templates/application.yml.j2
