@@ -50,6 +50,18 @@ From the Left Hand Nav Panel. Select Service Accounts
 
 **Step 11)** Copy your JSON key into the `hedera-mirror-node/group_vars` directory
 
+Project Directory Example
+-------------------------
+```
+.
+├── group_vars
+│   └── google-project-id.json
+├── inventory.ini
+├── roles
+│   └── requirements.yml
+└── server_build.yml
+```
+
 Role Variables
 --------------
 
@@ -74,17 +86,6 @@ Example Playbook
 ...
 ```
 
-Project Directory Example
--------------------------
-```
-.
-├── group_vars
-│   └── google-project-id.json
-├── inventory.ini
-├── roles
-│   └── requirements.yml
-└── server_build.y
-```
 
 License
 -------
