@@ -8,7 +8,7 @@
     
     - name: Install required system packages
       apt: name={{ item }} state=latest update_cache=yes
-      loop: ['software-properties-common','apt-transport-https', 'ca-certificates', 'curl', 'vim', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools', 'docker-compose', 'python-pip', 'openjdk-11-jdk', 'maven']
+      loop: ['software-properties-common','apt-transport-https', 'ca-certificates', 'curl', 'vim', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools', 'docker-compose', 'python-pip', 'openjdk-11-jdk']
     
     
     ## https://stackoverflow.com/questions/51222996/docker-login-fails-on-a-server-with-no-x11-installed 
@@ -45,4 +45,7 @@
         dest: /opt/hedera-mirror-node
     
     - name: Run Maven Install
-      shell: /opt/hedera-mirror-node/mvnw clean install -DskipTests
+      shell: ./mvnw clean install -DskipTests
+      args:
+        chdir: /opt/hedera-mirror-node
+
