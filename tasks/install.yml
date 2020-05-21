@@ -38,7 +38,7 @@
         name: docker
         state: started
     
-    - Name: Check if destination already is there
+    - name: Check if destination already is there
       stat:
         path: /opt/hedera-mirror-node
       register: project_directory
