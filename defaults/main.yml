@@ -1,4 +1,5 @@
 ---
+# defaults file for hedera-gcs-setup
 bucket_name: hedera-mainnet-streams
 cloud_provider: GCP
 network: MAINNET
