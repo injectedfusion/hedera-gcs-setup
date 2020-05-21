@@ -57,7 +57,7 @@
         clone: yes
         update: yes
     
-    - name: Run Maven Clean Install
+    - name: Run Maven Clean Install, this will take a few minutes..
       shell: ./mvnw clean install -DskipTests
       args:
         chdir: /opt/hedera-mirror-node
