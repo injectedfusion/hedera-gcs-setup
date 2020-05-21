@@ -118,6 +118,17 @@ Using your code editor of choice, create a file in the top level of your directo
 ansible-galaxy install -r roles/requirements.yml --force
 ```
 
+Your project directory should look something like this
+```console
+.
+├── group_vars
+│   └── google-proejct-id.json
+├── inventory.ini
+├── roles
+│   └── requirements.yml
+└── server-build.yml
+```
+
 **Step 3)** Now we are good to run our playbook which will build & deploy our MirrorNode
 ```console
 ansible-playbook -i inventory server_build.yml
