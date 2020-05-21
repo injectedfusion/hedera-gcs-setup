@@ -4,3 +4,9 @@
   template:
     src: templates/application.yml.j2
     dest: /opt/hedera-mirror-node/application.yml
+
+- name: Uncomment line from docker-compose
+  lineinfile:
+    dest: /opt/hedera-mirror-node/docker-compose.yml
+    regexp: '\s#-\s..application.yml:\/usr\/etc\/hedera-mirror-grpc\/application.yml'
+    line: '- ./application.yml:/usr/etc/hedera-mirror-grpc/application.yml'
