@@ -118,7 +118,9 @@ Example Playbook
   become: true
   roles:
     - hedera-gcs-setup
-  tags: docker_install
+  tags:
+    - install
+    - run
 ...
 ```
 

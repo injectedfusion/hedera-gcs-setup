@@ -4,4 +4,10 @@
   include: install.yml
   become: true
   tags:
-    - docker_install
+    - install
+
+- name: Provide our credentials and Launch the Mirror Node
+  include: run.yml
+  become: true
+  tags:
+    - run

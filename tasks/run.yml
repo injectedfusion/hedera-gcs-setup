@@ -1,0 +1,5 @@
+---
+- name: Provide our Application Config
+  template:
+    src: templates/application.yml.j2
+    dest: /opt/hedera-mirror-node/application.yml
