@@ -138,13 +138,58 @@ Example Playbook
 ...
 ```
 
+Execute our Playbook
+--------------------
+
+**Step 1)**
+
+Using your code editor of choice, create a file in the top level of your directory `server_build.yml'
+
+
+```yaml
+---
+- hosts: mirrornode
+  become: true
+  roles:
+    - hedera-gcs-setup
+  tags: docker_install
+...
+```
+
+**Step 2)** Let's install the necessary ansible role
+```console
+ansible-galaxy install -r roles/requirements.yml --force
+```
+
+Your project directory should look something like this
+```console
+.
+├── group_vars
+│   └── project-id.json
+├── inventory.ini
+├── roles
+│   └── requirements.yml
+└── server-build.yml
+```
+
+**Step 3)** Now we are good to run our playbook which will build & deploy our MirrorNode
+```console
+ansible-playbook -i inventory server_build.yml
+```
 
 License
 -------
 
-BSD
+MIT
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
 
 Author Information
 ------------------
 
 Gabriel Rodriguez
+
