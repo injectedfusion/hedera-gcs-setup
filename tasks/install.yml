@@ -43,7 +43,7 @@
         path: /opt/hedera-mirror-node
       register: project_directory
 
-    - name: Make sure our destinaton project directory isn't already there.
+    - name: Remove the project directory if it exists.
       file:
         path: /opt/hedera-mirror-node
         state: absent
