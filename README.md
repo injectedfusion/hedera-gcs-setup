@@ -73,18 +73,6 @@ Navigate inside our project directory and launch the ansible requirements
 cd hedera-mirror-node
 ```
 
-### Project Directory Example
-
-```
-.
-├── group_vars
-│   └── google-project-id.json
-├── inventory.ini
-├── roles
-│   └── requirements.yml
-└── server_build.yml
-```
-
 Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
 ----------------------------------------------------------------------------------------------------------
 
