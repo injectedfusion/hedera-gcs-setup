@@ -16,23 +16,36 @@ Before getting started, you must have the following prerequisites:
 > Note: In order to operate a Hedera Node, you must configure a billing account, because the object storage bucket you will need to pull streams from is configured for  [requester pays](https://cloud.google.com/storage/docs/requester-pays). 
 Meaning that that mirror node operators will assume and accept the operational costs of reading and retrieving data records from the Hedera Network of your choice, either MainNet or TestNet.
 
+* [gsutil](https://cloud.google.com/storage/docs/gsutil)
+
+* [Ansible 2.9](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 * An [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04.4/) Linux Server with 2 CPU, 4GB Memory, 100 GB Storage
 > This is where we will install and operate a Hedera-Mirror-Node
 
-* [Ansible 2.9](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+### Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
+**Step 1)** Obtain access credentails for your user account via web-based authorization flow.
+```console
+gcloud auth login
+```
+**Step 2)** If you have multiple Google Cloud accounts it might be wise to check which one is active
+```console
+gcloud auth list
+```
+**Step 3)** Skip this step, if you only have one account, otherwise set the correct account
+```console
+gcloud config set account [ACCOUNT]
+```
+**Step 4)** Set your Project ID
+```console
+gcloud config set project [PROJECT_ID]
+```
+**Step 5)** Retrieve your Access Token will need to define it in a [configuration file](files/application.yml)
+```console
+gcloud auth print-access-token
+```
 
-### Authenticate and Authorize gcloud to access the Cloud Platform with your Google user credentials
-
-
-
-| Name                      | Default Value                     | Description                                 |
-|---------------------------|---------------------------------  |---------------------------------------------|
-| [YOUR_PROJECT_ID]         |                                   | Your Google Cloud Project Unique Identifier |
-| [HEDERA_BUCKET_NAME]      | `hedera-mainnet-streams`          | Hedera's Google Cloud Storage Bucket Name   |
-| [YOUR_OBJECT_DESTINATION] | `/var/lib/hedera-mirror-importer` | Location on where to store the file         |
-
-Replace the text in **[Brackets]** with your Google Cloud Storage Account
+> NOTE: Remember to replace the text in **[Brackets]** with your Google Cloud Storage Account information
 
 
 
