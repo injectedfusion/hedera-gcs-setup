@@ -56,7 +56,6 @@
         dest: /opt/hedera-mirror-node
         clone: yes
         update: yes
-        force: yes
     
     - name: Run Maven Clean Install
       shell: ./mvnw clean install -DskipTests
