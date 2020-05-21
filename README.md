@@ -76,13 +76,15 @@ Example Playbook
 
 Project Directory Example
 -------------------------
+```
 .
 ├── group_vars
-│   └── project-id.json
+│   └── google-project-id.json
 ├── inventory.ini
 ├── roles
-│   └── requirements.yml
-└── server-build.yml
+│   └── requirements.yml
+└── server_build.y
+```
 
 License
 -------
