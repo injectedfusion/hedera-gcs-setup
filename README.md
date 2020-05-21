@@ -93,6 +93,8 @@ From the Left Hand Nav Panel. Select Service Accounts
 
 **Step 8)** Click on `+ CREATE KEY`
 
+**Step 9)** Ensure JSON is Selected to Create the Key
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
