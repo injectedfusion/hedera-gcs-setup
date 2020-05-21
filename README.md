@@ -79,7 +79,7 @@ ansible-galaxy install -r roles/requirements.yml
 Use the [Google Documentation Guide](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) for this step
 
 **Step 2)** 
-Select Service Accounts
+From the Left Hand Nav Panel. Select Service Accounts
 
 
 
