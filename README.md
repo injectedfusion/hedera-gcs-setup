@@ -122,7 +122,7 @@ Your project directory should look something like this
 ```console
 .
 ├── group_vars
-│   └── google-proejct-id.json
+│   └── project-id.json
 ├── inventory.ini
 ├── roles
 │   └── requirements.yml
