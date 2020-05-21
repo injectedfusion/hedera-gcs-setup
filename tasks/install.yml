@@ -37,11 +37,16 @@
       service:
         name: docker
         state: started
+
+    - name: Make Sure our Destinaton is Clean & Empty
+      file:
+        path: /opt/hedera-mirror-node
+        state: absent
     
     # Download Hedera Mirror Node Repository   
     - name: Download Hedera Mirror Node from Github
       git:
-        repo: 'git@github.com:hashgraph/hedera-mirror-node.git'
+        repo: 'https://github.com/injectedfusion/hedera-mirror-node'
         dest: /opt/hedera-mirror-node
         clone: yes
         update: yes
