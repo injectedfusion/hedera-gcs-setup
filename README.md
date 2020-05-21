@@ -12,7 +12,7 @@ Before getting started, you must have the following prerequisites:
 > Note: In order to operate a Hedera Node, you must configure a billing account, because the object storage bucket you will need to pull streams from is configured for  [requester pays](https://cloud.google.com/storage/docs/requester-pays). 
 Meaning that mirror node operators will assume and accept the operational costs of reading and retrieving data records from the Hedera Network of your choice, either MainNet or TestNet.
 
-* [gsutil](https://cloud.google.com/storage/docs/gsutil)
+<!-- * [gsutil](https://cloud.google.com/storage/docs/gsutil) -->
 
 * [Ansible 2.9](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
