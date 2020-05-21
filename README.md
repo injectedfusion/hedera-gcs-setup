@@ -40,7 +40,7 @@ mkdir hedera-mirror-node
 
 Let's create the subdirectories
 ```console
-mkdir hedera-mirror-node/group_vars 
+mkdir hedera-mirror-node/vars 
 ```
 ```console
 mkdir hedera-mirror-node/roles
@@ -115,7 +115,8 @@ Example Playbook
 ```yaml
 ---
 - hosts: mirrornode
-  become: true
+  vars_files:
+    - project-id.json
   roles:
     - hedera-gcs-setup
 ...
@@ -124,7 +125,9 @@ Example Playbook
 Execute our Playbook
 --------------------
 
-**Step 1)** Using your code editor of choice, create a file `server_build.yml` with the contents of our [example playbook](https://github.com/injectedfusion/hedera-gcs-setup#example-playbook) in the top level of your directory.
+**Step 1)** Using your code editor of choice, create a file `server_build.yml` with the contents of our [example playbook](https://github.com/injectedfusion/hedera-gcs-setup#example-playbook) in the top level of your directory. 
+
+> Note: Make sure your vars_file `project-id.json` is specified with your filename in the playbook!
 
 
 **Step 2)** Let's install the necessary ansible role
@@ -135,7 +138,7 @@ ansible-galaxy install -r roles/requirements.yml --force
 Your finished project directory should look something like this
 ```console
 .
-├── group_vars
+├── vars
 │   └── project-id.json
 ├── inventory.ini
 ├── roles
@@ -145,7 +148,7 @@ Your finished project directory should look something like this
 
 **Step 3)** Now we are good to run our playbook which will build & deploy our MirrorNode
 ```console
-ansible-playbook -i inventory.ini server_build.yml
+ansible-playbook -i inventory.ini server_build.yml 
 ```
 
 License
