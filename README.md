@@ -73,8 +73,8 @@ Navigate inside our project directory and launch the ansible requirements
 cd hedera-mirror-node
 ```
 
-Project Directory Example
--------------------------
+### Project Directory Example
+
 ```
 .
 ├── group_vars
@@ -85,7 +85,8 @@ Project Directory Example
 └── server_build.yml
 ```
 
-### Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
+Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
+----------------------------------------------------------------------------------------------------------
 
 **Step 1)** Will need to generate credentials to call the Google Cloud Storage JSON API from our Hedera Node
 
