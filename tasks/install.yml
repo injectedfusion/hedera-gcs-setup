@@ -47,7 +47,7 @@
       file:
         path: /opt/hedera-mirror-node
         state: absent
-      when: project_directory.stat.exits == True
+      when: project_directory.stat.isdir is defined and project_directory.stat.isdir
     
     # Download Hedera Mirror Node Repository   
     - name: Download Hedera Mirror Node from Github
