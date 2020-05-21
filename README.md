@@ -45,7 +45,7 @@ gcloud config set project [PROJECT_ID]
 gcloud auth print-access-token
 ```
 
-> NOTE: Remember to replace the text in **[Brackets]** with your Google Cloud Storage Account information
+> NOTE: Remember to replace the text in **[Brackets]** with your Google Cloud account information
 
 
 
