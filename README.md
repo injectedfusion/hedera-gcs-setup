@@ -63,17 +63,6 @@ A list of other roles hosted on Galaxy should go here, plus any details in regar
 Example Playbook
 ----------------
 
-Your project directory should look something like this
-```console
-.
-├── group_vars
-│   └── project-id.json
-├── inventory.ini
-├── roles
-│   └── requirements.yml
-└── server-build.yml
-```
-
 `server_build.yml`
 ```yaml
 ---
@@ -84,6 +73,16 @@ Your project directory should look something like this
   tags: docker_install
 ...
 ```
+
+Project Directory Example
+-------------------------
+.
+├── group_vars
+│   └── project-id.json
+├── inventory.ini
+├── roles
+│   └── requirements.yml
+└── server-build.yml
 
 License
 -------
