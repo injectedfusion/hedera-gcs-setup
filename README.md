@@ -118,9 +118,6 @@ Example Playbook
   become: true
   roles:
     - hedera-gcs-setup
-  tags:
-    - install
-    - run
 ...
 ```
 
