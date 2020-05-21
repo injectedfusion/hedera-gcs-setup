@@ -27,7 +27,6 @@ Getting Started
 
 These instructions will guide you on retrieving record streams from a Hedera Network via which are stored in Google Cloud storage buckets. Don't worry about perform a git clone from here, we'll handle that with some automation.
 
-### Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
 
 ### Create our Project Directory and working files
 From your local machine let's create a project directory with some files
@@ -85,6 +84,8 @@ Project Directory Example
 │   └── requirements.yml
 └── server_build.yml
 ```
+
+### Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
 
 **Step 1)** Will need to generate credentials to call the Google Cloud Storage JSON API from our Hedera Node
 
