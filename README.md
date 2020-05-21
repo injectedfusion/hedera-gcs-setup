@@ -125,7 +125,7 @@ Example Playbook
 Execute our Playbook
 --------------------
 
-**Step 1)** Using your code editor of choice, create a file `server_build.yml` from the [example playbook](https://github.com/injectedfusion/hedera-gcs-setup#example-playbook) in the top level of your directory.
+**Step 1)** Using your code editor of choice, create a file `server_build.yml` with the contents of our [example playbook](https://github.com/injectedfusion/hedera-gcs-setup#example-playbook) in the top level of your directory.
 
 
 **Step 2)** Let's install the necessary ansible role
