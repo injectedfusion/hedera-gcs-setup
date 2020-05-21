@@ -81,6 +81,7 @@ Use the [Google Documentation Guide](https://cloud.google.com/iam/docs/creating-
 **Step 2)** 
 From the Left Hand Nav Panel. Select Service Accounts
 
+**Step 3)** Select your desired project
 
 
 ## Contributing
