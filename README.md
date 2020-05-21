@@ -97,6 +97,8 @@ From the Left Hand Nav Panel. Select Service Accounts
 
 **Step 10)** You maybe asked to download, go ahead allow and download the key to your machine.
 
+**Step 11)** Copy your JSON key into the `hedera-mirror-node/group_vars` directory
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
