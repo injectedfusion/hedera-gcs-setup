@@ -41,8 +41,9 @@
     # Download Hedera Mirror Node Repository   
     - name: Download Hedera Mirror Node from Github
       git:
-        repo: 'https://github.com/hashgraph/hedera-mirror-node.git'
+        repo: 'git@github.com:hashgraph/hedera-mirror-node.git'
         dest: /opt/hedera-mirror-node
+        clone: yes
         update: yes
         force: yes
     
