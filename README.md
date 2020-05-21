@@ -80,7 +80,7 @@ From the Left Hand Nav Panel. Select Service Accounts
 
 **Step 3)** Select your desired project
 
-**Step 4)** From the Top, click on + CREATE SERVICE ACCOUNT
+**Step 4)** From the Top, click on `+ CREATE SERVICE ACCOUNT`
 
 **Step 5)** You're welcome to name this whatever your like, `hedera-mirror-node` is a good start
 
