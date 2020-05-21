@@ -99,6 +99,24 @@ From the Left Hand Nav Panel. Select Service Accounts
 
 **Step 11)** Copy your JSON key into the `hedera-mirror-node/group_vars` directory
 
+### We are ready to create and launch our playbook.
+
+**Step 1)**
+
+Using your code editor of choice, create a file in the top level of your directory `hedera-mirror-node/server_build.yml'
+
+
+```yaml
+---
+- hosts: mirrornode
+  become: true
+  roles:
+    - hedera-gcs-setup
+  tags: docker_install
+...
+```
+
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
