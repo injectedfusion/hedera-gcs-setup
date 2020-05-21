@@ -146,7 +146,7 @@ Your finished project directory should look something like this
 
 **Step 3)** Now we are good to run our playbook which will build & deploy our MirrorNode
 ```console
-ansible-playbook -i inventory server_build.yml
+ansible-playbook -i inventory.ini server_build.yml
 ```
 
 License
