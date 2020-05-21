@@ -133,7 +133,7 @@ Execute our Playbook
 ansible-galaxy install -r roles/requirements.yml --force
 ```
 
-Your project directory should look something like this
+Your finished project directory should look something like this
 ```console
 .
 ├── group_vars
