@@ -89,7 +89,9 @@ From the Left Hand Nav Panel. Select Service Accounts
 
 **Step 6)** Add a description this is optional and click `CREATE`
 
-**Step 7)** Click on Continue
+**Step 7)** Click on Continue. and Click continue again on the select role
+
+**Step 8)** Click on `+ CREATE KEY`
 
 
 ## Contributing
