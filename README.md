@@ -122,6 +122,17 @@ Example Playbook
 ...
 ```
 
+Your project directory should look something like this
+```console
+.
+├── vars
+│   └── project-id.json
+├── inventory.ini
+├── roles
+│   └── requirements.yml
+└── server_build.yml
+```
+
 Execute our Playbook
 --------------------
 
@@ -135,16 +146,6 @@ Execute our Playbook
 ansible-galaxy install -r roles/requirements.yml --force
 ```
 
-Your finished project directory should look something like this
-```console
-.
-├── vars
-│   └── project-id.json
-├── inventory.ini
-├── roles
-│   └── requirements.yml
-└── server_build.yml
-```
 
 **Step 3)** Now we are good to run our playbook which will build & deploy our MirrorNode
 ```console
