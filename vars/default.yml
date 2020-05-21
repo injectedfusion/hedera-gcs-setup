@@ -1,0 +1,5 @@
+---
+bucket_name: hedera-mainnet-streams
+cloud_provider: GCP
+network: MAINNET
+topic: 1590080400000000000
