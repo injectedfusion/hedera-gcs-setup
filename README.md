@@ -145,7 +145,7 @@ Your project directory should look something like this
 ├── inventory.ini
 ├── roles
 │   └── requirements.yml
-└── server-build.yml
+└── server_build.yml
 ```
 
 **Step 3)** Now we are good to run our playbook which will build & deploy our MirrorNode
