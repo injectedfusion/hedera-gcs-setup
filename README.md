@@ -133,7 +133,7 @@ Your project directory should look something like this
 └── server_build.yml
 ```
 
-Execute our Playbook
+Build & Execute our Playbook
 --------------------
 
 **Step 1)** Using your code editor of choice, create a file `server_build.yml` with the contents of our [example playbook](https://github.com/injectedfusion/hedera-gcs-setup#example-playbook) in the top level of your directory. 
