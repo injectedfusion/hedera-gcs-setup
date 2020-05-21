@@ -40,7 +40,7 @@ gcloud config set account [ACCOUNT]
 ```console
 gcloud config set project [PROJECT_ID]
 ```
-**Step 5)** Retrieve your Access Token will need to define it in a [configuration file](files/application.yml)
+**Step 5)** Retrieve your Access Token, as you will need to define it in a [configuration file](files/application.yml)
 ```console
 gcloud auth print-access-token
 ```
