@@ -32,12 +32,7 @@
     - name: Install Docker Module for Python
       pip:
         name: docker, docker-compose
-    
-    - name: Start Service docker, if not started
-      service:
-        name: docker
-        state: started
-    
+       
     - name: Check if destination already is there
       stat:
         path: /opt/hedera-mirror-node
