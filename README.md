@@ -76,30 +76,16 @@ cd hedera-mirror-node
 Authenticate and Authorize gcloud to access the object storage bucket with your Google account credentials
 ----------------------------------------------------------------------------------------------------------
 
-**Step 1)** Will need to generate credentials to call the Google Cloud Storage JSON API from our Hedera Node
+Will need to generate credentials to call the Google Cloud Storage JSON API from our Hedera Node
 
-Use the [Google Documentation Guide](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) for this step
+**(Step 1)** Generate a HMAC Key
+Use the [Google Documentation Guide](https://cloud.google.com/storage/docs/authentication/managing-hmackeys) for this step
 
-**Step 2)** 
-From the Left Hand Nav Panel. Select Service Accounts
+![](static/HMAC_keys.gif)
 
-**Step 3)** Select your desired project
+**(Step 2)** Using a code editor of your choice create file named `project-id.json` copy your HMAC access key and secret key from the previous step.
 
-**Step 4)** From the Top, click on `+ CREATE SERVICE ACCOUNT`
-
-**Step 5)** You're welcome to name this whatever your like, `hedera-mirror-node` is a good start
-
-**Step 6)** Add a description this is optional and click `CREATE`
-
-**Step 7)** Click on Continue. and Click continue again on the select role
-
-**Step 8)** Click on `+ CREATE KEY`
-
-**Step 9)** Ensure JSON is Selected to Create the Key
-
-**Step 10)** You maybe asked to download, go ahead allow and download the key to your machine.
-
-**Step 11)** Copy your JSON key into the `hedera-mirror-node/group_vars` directory
+![](static/project-id_creds.gif)
 
 
 <!-- Role Variables
@@ -138,7 +124,6 @@ Build & Execute our Playbook
 
 **Step 1)** Using your code editor of choice, create a file `server_build.yml` with the contents of our [example playbook](https://github.com/injectedfusion/hedera-gcs-setup#example-playbook) in the top level of your directory. 
 
-> Note: Make sure your vars_file `project-id.json` is specified with your filename in the playbook!
 
 
 **Step 2)** Let's install the necessary ansible role
