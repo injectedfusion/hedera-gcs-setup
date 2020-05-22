@@ -85,6 +85,13 @@ Use the [Google Documentation Guide](https://cloud.google.com/storage/docs/authe
 
 **(Step 2)** Using a code editor of your choice create file named `project-id.json` copy your HMAC access key and secret key from the previous step.
 
+`project-id.json`
+```json
+{
+  "access_key":"GOOG1E...",
+  "secret_key":"H/4..."
+}
+
 ![](static/project-id_creds.gif)
 
 
