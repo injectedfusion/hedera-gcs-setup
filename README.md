@@ -108,7 +108,7 @@ Example Playbook
 ...
 ```
 
-Your project directory should look something like this
+Your project directory should now look something like this
 ```console
 .
 ├── vars
