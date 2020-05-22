@@ -18,7 +18,7 @@
     state: started
     enabled: yes
 
-- name: Docker-Compose Up
+- name: Run `docker-compose up` and start Mirror Node Services
   docker_compose:
     project_src: /opt/hedera-mirror-node
-  state: present
+    state: present

@@ -1,5 +1,6 @@
 ---
-- name: Docker-Compose Up
+- name: Run `docker-compose down` and tear down existing services
   docker_compose:
     project_src: /opt/hedera-mirror-node
     state: absent
+...
