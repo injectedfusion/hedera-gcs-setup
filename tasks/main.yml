@@ -10,7 +10,7 @@
   include: run.yml
   become: true
   tags:
-    - run_mirror_node
+    - start_services
 
 - name: Stop Services
   include: stop.yml
