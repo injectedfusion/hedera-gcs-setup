@@ -96,8 +96,10 @@ Use the [Google Documentation Guide](https://cloud.google.com/storage/docs/authe
 ![](static/project-id_creds.gif)
 
 
-Example Playbook
-----------------
+Build & Execute our Playbook
+--------------------
+
+**Step 1)** Using your code editor of choice, create a file `server_build.yml` with the contents of our in the top level of your directory.
 
 `server_build.yml`
 ```yaml
@@ -120,11 +122,6 @@ Your project directory should now look something like this
 │   └── requirements.yml
 └── server_build.yml
 ```
-
-Build & Execute our Playbook
---------------------
-
-**Step 1)** Using your code editor of choice, create a file `server_build.yml` with the contents of our [example playbook](https://github.com/injectedfusion/hedera-gcs-setup#example-playbook) in the top level of your directory. 
 
 
 
