@@ -81,7 +81,7 @@ Will need to generate credentials to call the Google Cloud Storage JSON API from
 **(Step 1)** Generate a HMAC Key
 Use the [Google Documentation Guide](https://cloud.google.com/storage/docs/authentication/managing-hmackeys) for this step
 
-![](static/HMAC_keys.gif)
+![](static/hmac_keys.gif)
 
 **(Step 2)** Using a code editor of your choice create file named `project-id.json` copy your HMAC access key and secret key from the previous step.
 
