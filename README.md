@@ -78,7 +78,7 @@ Authenticate and Authorize gcloud to access the object storage bucket with your 
 
 Will need to generate credentials to call the Google Cloud Storage JSON API from our Hedera Node
 
-**(Step 1)** Generate a HMAC Key
+**(Step 1)** Generate a HMAC Key.
 Use the [Google Documentation Guide](https://cloud.google.com/storage/docs/authentication/managing-hmackeys) for this step
 
 ![](static/hmac_keygen.gif)
