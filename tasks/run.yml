@@ -11,4 +11,3 @@
     regexp: '\s#-\s..application.yml:\/usr\/etc\/hedera-mirror-importer\/application.yml'
     line: '    - ./application.yml:/usr/etc/hedera-mirror-grpc/application.yml'
     backrefs: yes
-    state: absent
