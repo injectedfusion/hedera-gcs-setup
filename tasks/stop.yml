@@ -1,0 +1,5 @@
+---
+- name: Docker-Compose Up
+  docker_compose:
+    project_src: /opt/hedera-mirror-node
+    state: absent
