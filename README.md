@@ -102,7 +102,7 @@ Example Playbook
 ---
 - hosts: mirrornode
   vars_files:
-    - project-id.json
+    - ./vars/project-id.json
   roles:
     - hedera-gcs-setup
 ...
