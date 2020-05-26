@@ -2,7 +2,7 @@ hedera-gcs-setup
 =========
 
 This repository is an Ansible role to quickly stand up an open-source Hedera Mirror Node. 
-> Note: This how-to tutorial meant to quickly get started and not to be used as an official representation by Hedera on what platform architecture must be used.
+> Note: This how-to tutorial is meant to quickly get started and not to be used as an official representation by Hedera on what platform architecture must be used.
 
 
 Requirements
