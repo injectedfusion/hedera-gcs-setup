@@ -141,8 +141,11 @@ ansible-playbook -i inventory.ini server_build.yml --tags "install, start_servic
 ansible-playbook -i inventory.ini server_build.yml --tags "stop_services"
 ```
 
-Here is Sequence Diagram of what's all happening above.
 
+
+Sequence Diagram
+----------------
+Here is Sequence Diagram of what's all happening above.
 ![Sequence Diagram](./static/mermaid-diagram-20200526185105.svg)<img src="./static/mermaid-diagram-20200526185105.svg">
 
 
