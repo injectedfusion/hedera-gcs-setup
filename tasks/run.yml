@@ -9,7 +9,7 @@
   lineinfile:
     path: /opt/hedera-mirror-node/docker-compose.yml
     regexp: '\s#-\s..application.yml:\/usr\/etc\/hedera-mirror-importer\/application.yml'
-    line: '      - ./application.yml:/usr/etc/hedera-mirror-grpc/application.yml'
+    line: '      - ./application.yml:/usr/etc/hedera-mirror-importer/application.yml'
     backrefs: yes
 
 - name: Start Service docker
