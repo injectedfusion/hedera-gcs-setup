@@ -131,12 +131,17 @@ ansible-galaxy install -r roles/requirements.yml --force
 ```
 
 
-**Step 3)** Now we are good to run our playbook which will build & deploy our MirrorNode
+**Step 3)** Now we are good to build & deploy our MirrorNode
 ```console
-ansible-playbook -i inventory.ini server_build.yml --tags "install, start_services"
+ansible-playbook -i inventory.ini server_build.yml --tags "install"
 ```
 
-**Step 4)** If your wish to stop the mirror node services
+**Step 4)** Let's start the Mirror Node Services
+```console
+ansible-playbook -i inventory.ini server_build.yml --tags "start_services"
+```
+
+**Step 5)** If your wish to stop the mirror node services
 ```console
 ansible-playbook -i inventory.ini server_build.yml --tags "stop_services"
 ```
