@@ -18,7 +18,8 @@ touch ~/Desktop/hedera-mirror-node/vars/project-id.json
 cat >> ~/Desktop/hedera-mirror-node/vars/project-id.json <<- _EOF_
 {
   "access_key":"GOOG1E...",
-  "secret_key":"H/4..."
+  "secret_key":"H/4...",
+  "project_id":"Your-Google-Project-ID"
 }
 _EOF_
 touch ~/Desktop/hedera-mirror-node/server_build.yml
