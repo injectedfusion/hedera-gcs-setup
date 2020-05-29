@@ -53,7 +53,7 @@
         update: yes
     
     - name: Run Maven Clean Install, this will take a few minutes..
-      shell: ./mvn install -DskipTests -Ddocker.tag.version=latest
+      shell: ./mvnw install -DskipTests -Ddocker.tag.version=latest
       args:
         chdir: /opt/hedera-mirror-node
 
